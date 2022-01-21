@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+ <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="x-ua-compatible" content="ie=edge" />
+        <title>Adyen Web | Drop-in</title>
+        <meta name="description" content="" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- <link rel="stylesheet" href="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/5.0.0/adyen.css"
+    integrity="sha384-0IvbHDeulbhdg1tMDeFeGlmjiYoVT6YsbfAMKFU2lFd6YKUVk0Hgivcmva3j6mkK"
+    crossorigin="anonymous">-->
+     <link rel="stylesheet"
+     href="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.0.0/adyen.css"
+     integrity="sha384-0IvbHDeulbhdg1tMDeFeGlmjiYoVT6YsbfAMKFU2lFd6YKUVk0Hgivcmva3j6mkK"
+     crossorigin="anonymous">
+
+       <!-- <link rel="stylesheet" href="{{url_for('static', filename='css/adyen.css')}}"> -->
+    </head>
+
+    <body>
+        <header></header>
+        <main>
+             <div id="dropin-container" style="margin-top: 15px;"/>
+        </main>
+
+        <script id="mySession" type="application/json">{{ session|safe }}</script>
+        <script id="redirectResult" type="application/json">{{ redirectResult|safe }}</script>
+        <script src="https://checkoutshopper-live.adyen.com/checkoutshopper/sdk/5.0.0/adyen.js"
+     integrity="sha384-kcKKvS6qZbXycrUw31OJ2/2Hz8A8FTsV9anjvpyQc/IWR1SmkFUw7w7F/t5S3qtA"
+     crossorigin="anonymous"></script>
+       <!-- <script src="https://checkoutshopper-test.adyen.com/checkoutshopper/sdk/5.0.0/adyen.js"
+   integrity="sha384-kcKKvS6qZbXycrUw31OJ2/2Hz8A8FTsV9anjvpyQc/IWR1SmkFUw7w7F/t5S3qtA"
+   crossorigin="anonymous"></script>-->
+       <!-- <script src="{{ url_for('static', filename = 'js/adyen.js') }}"
+            type="text/javascript"></script>-->
+        <script src="{{ url_for('static', filename = 'js/redirect.js') }}"
+            type="text/javascript"></script>
+
+    </body>
+</html>
